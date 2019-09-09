@@ -6,8 +6,9 @@ https://help.sap.com/viewer/65de2977205c403bbc107264b8eccf4b/Cloud/en-US/73beb06
 
 As a pre-requisite it is assumed that ..
 
-* there were  already cloud credits assigned to the global account and
-* admin authorization has been granted. 
+* there were  already **cloud credits assigned** to the global account,
+* **admin authorization** has been granted and 
+* using **Google Chrome** (Safari and Windows Explorer have showing some pop-ups not properly 
 
 ## Global Account Landing Page
 ![Global Account Landing Page](./images/GobalAccount.png)
