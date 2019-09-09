@@ -8,7 +8,7 @@ As a pre-requisite it is assumed that ..
 
 * there were  already **cloud credits assigned** to the global account,
 * **admin authorization** has been granted and 
-* using **Google Chrome** (Safari and Windows Explorer have showing some pop-ups not properly 
+* using **Google Chrome** (Safari and Windows Explorer does not show some pop-ups properly)
 
 ## Global Account Landing Page
 ![Global Account Landing Page](./images/GobalAccount.png)
