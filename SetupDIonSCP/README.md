@@ -4,7 +4,10 @@ This is a straight forward guidelind for creating an DI instance on SCP without 
 
 https://help.sap.com/viewer/65de2977205c403bbc107264b8eccf4b/Cloud/en-US/73beb06e127f4e47b849aa95344aabe1.html
 
-As a pre-requisite it is assumed that there were  already cloud credits assigned to the global account.
+As a pre-requisite it is assumed that ..
+
+* there were  already cloud credits assigned to the global account and
+* admin authorization has been granted. 
 
 ## Global Account Landing Page
 ![Global Account Landing Page](./images/GobalAccount.png)
