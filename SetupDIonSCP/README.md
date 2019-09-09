@@ -21,12 +21,12 @@ Click on *New Subaccount* for creating a new one  on *Cloud Foundry*. The subdom
 
 Finally you have a sub account with the available quota of SAP Data Intelligence already assigned to. 
 
-![SubaccountQuota](./images/SubaccountQuota.png)
+![SubAccountQuota](./images/SubAccountQuota.png)
 
 ## Creating a Space
 You need to create a space that carries the quota. Assumingly the new space consumes all available quota provided by the cloud credits.
 
-![Newspace](./images/Newspace.png)
+![Newspace](./images/NewSpace.png)
 
 ## Creating an DI Instance
 
