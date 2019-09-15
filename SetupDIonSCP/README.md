@@ -1,6 +1,6 @@
-# New SAP Data Intelligence Instance on SAP Clound Platform
+# New SAP Data Intelligence Instance on SAP Cloud Platform
 
-This is a straight forward guidelind for creating an DI instance on SCP without presuming too much knowlegde about SCP. Nonetheless there is no harm if having some spare time onhand to read the manual: 
+This is a straight forward guideline for creating an DI instance on SCP without presuming too much knowlegde about SCP. Nonetheless there is no harm if having some spare time onhand to read the manual: 
 
 https://help.sap.com/viewer/65de2977205c403bbc107264b8eccf4b/Cloud/en-US/73beb06e127f4e47b849aa95344aabe1.html
 
