@@ -76,6 +76,9 @@ import os
 import io
 
 def get_dataset(exec_id) :
+	# getting a client from the internal DI Data Lake
+	 client = InsecureClient('http://datalake:50070')
+	 
     basepath =  "/worm/sap/di/ml/artifacts/executions/"
     artifact_folder_file = os.path.join(basepath,exec_id_file)
     folder_list = client.list(artifact_folder_file)
