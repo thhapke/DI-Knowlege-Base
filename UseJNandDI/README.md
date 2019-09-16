@@ -68,19 +68,19 @@ and copy the link to the *Metadata Explorer*, connection: *DI\_DATA\_LAKE*.
 ## Accessing a Data Set in Jupyter Notebook
 The *DI\_DATA\_LAKE* is a HDFS storage that you can access using the package **HdfsCLI** (https://hdfscli.readthedocs.io/en/latest/).
 
-For loading a dataset you can use the following code snippet: 
+For loading and saveing datasets or other data you can use the following code snippet: 
 
 ```  python
 from hdfs import InsecureClient
 import os
 import io
 
-def get_dataset(exec_id) :
-	# getting a client from the internal DI Data Lake
-	 client = InsecureClient('http://datalake:50070')
-	 
-    basepath =  "/worm/sap/di/ml/artifacts/executions/"
-    artifact_folder_file = os.path.join(basepath,exec_id_file)
+# dataset reading 
+def get_dataset(exec_id,basepath ="/worm/sap/di/ml/artifacts/executions/",hdfs_url = 'http://datalake:50070' ) :
+    logging.getLogger('hdfs').setLevel(logging.WARNING)
+    client = InsecureClient(hdfs_url)
+    
+    artifact_folder_file = os.path.join(basepath,exec_id)
     folder_list = client.list(artifact_folder_file)
     artificat_dataset = os.path.join(artifact_folder_file,folder_list[0])
     
@@ -90,9 +90,21 @@ def get_dataset(exec_id) :
     dataset = io.BytesIO(csv_file)
     
     return dataset
+
+# saving data to hdfs
+def hdfs_save(exec_id,filename,data,basepath =  "/worm/sap/di/ml/artifacts/executions/",hdfs_url = 'http://datalake:50070',\
+             overwrite=False) :
+    client = InsecureClient(hdfs_url)
+    artifact_folder = os.path.join(basepath,exec_id)
+    artificat_filename = os.path.join(artifact_folder,filename)
+    client.write(artificat_filename,data,overwrite=overwrite)
     
-# get dataset via execution_id
-dataset = get_dataset('3addfffb8f83493daf23a30b83949dde') 
+# dataset saving 
+def save_dataset(exec_id,filename,data,basepath =  "/worm/sap/di/ml/artifacts/executions/",hdfs_url = 'http://datalake:50070') :
+    df_str = data.to_csv(sep=';',index=False)
+    df_b = str.encode(df_str)
+    hdfs_save(exec_id = exec_id,filename = filename, data = df_b, basepath = basepath, hdfs_url = hdfs_url)
+
 ```
 
 
