@@ -1,4 +1,4 @@
-# Some Note about Docker on DI 
+# Some Notes about Docker on SAP Data Intelligence 
 In general you can use any docker image to run on DI. You only have to ensure that it is correctly tagged so that the pipeline scheduler can select the appropriate docker container that provides the libraries required by the operators. 
 
 You might run into the challenge of using operators having tags that none of the existing docker image complies with, e.g. 'flowagent' and 'python36'. Then either you
@@ -169,7 +169,7 @@ to the Dockerfile the good news is that the building process is much faster but 
 Now the fun part starts where you start a docker container with the working image and step by step install what you need to learn the behaviour.
 
 ## Step by Step Installation
-For the step-by-step installation you first need to run the container interactively using shell where you can test all your commands:
+For the step-by-step installation you first need to run the container interactively using the shell where you can test all your commands:
 
 ```eccodes-di d051079$ docker run  -it eccodes bash``` or
   
@@ -209,30 +209,9 @@ Here we go. Now we have all the commands tested and the Dockerfile should run wi
 
 
 
-
-
-
-
-
-
-
-
-
-
- 
-
-
- 
-
-
-
-
-
-
-
 ## Reference
 [SAP DI Help -  Create Docker](https://help.sap.com/viewer/29ff74dc606c41acad117003f6034ac7/2.6.latest/en-US/62d1df08fa384d0e88bbe9b7cbd2c3fb.html?q=docker)
 
-[SAP DI Help - Docker Inheritance] (https://help.sap.com/viewer/29ff74dc606c41acad117003f6034ac7/2.6.latest/en-US/d49a07c5d66c413ab14731adcfc4f6dd.html)
+[SAP DI Help - Docker Inheritance](https://help.sap.com/viewer/29ff74dc606c41acad117003f6034ac7/2.6.latest/en-US/d49a07c5d66c413ab14731adcfc4f6dd.html)
 
 
